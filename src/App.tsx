@@ -1,35 +1,61 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import {useState, useEffect, createContext} from "react";
+import './App.scss'
+import fetchCharacters from "./functions/fetchAPI.ts";
+import {filterImage} from "./functions/filterImage.ts";
+import LoadingPage from "./components/pages/LoadingPage.tsx";
+import GamePage from "./components/pages/GamePage.tsx";
+import DifficultyPage from "./components/pages/DifficultyPage.tsx";
+import WinPage from "./components/pages/WinPage.tsx";
+import LosePage from "./components/pages/LosePage.tsx";
+import SoundBtn from "./components/SoundBtn.tsx";
+import { SoundProvider } from "./contexts/SoundContext.tsx";
 
+export interface pageContextType {
+  charList:string[];
+  currScore:number;
+  bestScore:number;
+  selectedLevel:string;
+  winActive:boolean;
+  loseActive:boolean;
+  setCharList: React.Dispatch<React.SetStateAction<string[]>>;
+  setWinActive: React.Dispatch<React.SetStateAction<boolean>>;
+  setLoseActive: React.Dispatch<React.SetStateAction<boolean>>;
+  setDifficultyActive: React.Dispatch<React.SetStateAction<boolean>>;
+  setCurrScore: React.Dispatch<React.SetStateAction<number>>;
+  setBestScore: React.Dispatch<React.SetStateAction<number>>;
+  setSelectedLevel:React.Dispatch<React.SetStateAction<string>>;
+}
+
+export const pageContext = createContext<pageContextType>({} as pageContextType);
 function App() {
-  const [count, setCount] = useState(0)
+  const [charList, setCharList] = useState<string[]>([]);
+  const [winActive, setWinActive] = useState(false);
+  const [loseActive, setLoseActive] = useState(false);
+  const [LoadingPageActive, setLoadingPageActive]= useState(true);
+  const [difficultyActive, setDifficultyActive]= useState(false);
+  const [selectedLevel, setSelectedLevel]  = useState("");
+  const [currScore, setCurrScore] = useState(0);
+  const [bestScore, setBestScore] = useState(0);
 
-  return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+  useEffect(() => {
+    async function fetchData() {
+      const fetchedNameList = await fetchCharacters();
+      const filteredList = filterImage(fetchedNameList);
+      setCharList(filteredList);
+    }
+    fetchData();
+  },[]);
+  return (    
+    <SoundProvider>
+       <pageContext.Provider value={{ charList, setCharList, winActive, loseActive, setDifficultyActive, setWinActive, setLoseActive, currScore, bestScore, setCurrScore, setBestScore, selectedLevel, setSelectedLevel }}>
+				<>
+					{LoadingPageActive ? <LoadingPage setPageActive={setLoadingPageActive} /> : difficultyActive ? <DifficultyPage /> : winActive ? <WinPage /> : loseActive ? <LosePage /> : <GamePage />}
+					<SoundBtn />
+				</>
+			</pageContext.Provider>
+    </SoundProvider>
+    
+  );
 }
 
 export default App
