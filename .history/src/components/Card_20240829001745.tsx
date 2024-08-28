@@ -89,6 +89,5 @@ function Card({charName}:CardProps){
 				</Tilt>
         )}
     </>
-    );
+    )
 }    
-export default Card;

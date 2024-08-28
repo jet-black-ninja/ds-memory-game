@@ -91,4 +91,3 @@ function Card({charName}:CardProps){
     </>
     );
 }    
-export default Card;

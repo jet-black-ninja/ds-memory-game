@@ -13,7 +13,7 @@ interface CardProps{
 }
 
 //remove - and capitalize
-function normalizeName(charName :string){
+function NormalizeName(charName :string){
     charName = charName.replace(/-/g," ");
     let charNameList = charName.split("");
     charNameList = charNameList.map((name)=> name.charAt(0).toUpperCase() + name.slice(1));
@@ -61,34 +61,12 @@ function Card({charName}:CardProps){
                                 <h1>{NormalizeName}</h1>
                             </div>
                         </div> 
-                        <div className ="card-face card-face-back">
-                            <div className ="card">
-                                <img src={cardBack} alt="card back image"/>
-                            </div>
-                        </div>
-                    </div>{" "}
+                    </div>
                 </div>
             </Tilt>
         ):(
-            <Tilt glareEnable={true} glareMaxOpacity={0.5} glareColor="#ffffff" glarePosition="left" glareBorderRadius="20px">
-					<div id={charName} onClick={handleClick} className="scene">
-						<div className={isFlipped ? "card flip-active" : "card"}>
-							<div className="card-face card-face-front">
-								<div className="card-content">
-									<img src={imageSrc} alt="card front image" />
-									<h1>{NormalizeName}</h1>
-								</div>
-							</div>
-							<div className="card-face card-face-back">
-								<div className="card">
-									<img src={cardBack} alt="card back image" />
-								</div>
-							</div>
-						</div>{" "}
-					</div>
-				</Tilt>
+
         )}
-    </>
-    );
+        </>
+    )
 }    
-export default Card;
