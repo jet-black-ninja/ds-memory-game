@@ -1,0 +1,14 @@
+@import "./mixins.scss";
+@import "./Fonts.scss";
+.main-game-container{
+    @include backgroundVideoMobile();
+    color :rgb(255, 255, 255);
+    font-family: "Agbalumo", sans-serif;
+    text-shadow:1px 1px 1px rgb(7, 14, 40);
+    height:100vh;
+    overflow:auto;
+    display:flex;
+    flex-direction : column;
+    align-items:center;
+    
+}

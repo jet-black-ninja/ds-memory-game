@@ -1,0 +1,6 @@
+@import "./mixins.scss";
+@import "./Fonts.scss";
+.main-game-container{
+    @include backgroundVideoMobile();
+    
+}

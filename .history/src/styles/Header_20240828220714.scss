@@ -1,0 +1,55 @@
+.main-title-container{
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    font-family: "Agbalumo", sans-serif;
+    text-shadow:1px 1px 2px rgb(7, 14, 40);
+    .logo-container{
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        gap:20px;
+        #dark-souls-logo{
+            margin-top:10px;
+            width:180px;
+            @media screen and (min-width: 700px){
+                width:200px;
+            }
+        }
+
+        .divide{
+            color:rgb(218, 152, 30);
+            margin-top:30px;
+            font-family:"Special Elite", serif;
+            font-size:3.5rem;
+            @media screen and (min-width:700px){
+                font-size:4rem;
+            }
+        }
+
+        .tcg-logo-container{
+            position:relative;
+            #fire-logo{
+                cursor:pointer;
+                transition:all .7s ease-in-out;
+                z-index: 1;
+                &:hover{
+                    transform:rotate(360deg);
+                }
+                width:90px;
+                @media screen and (min-width: 700px){
+                    width:95px;
+                }
+            }
+
+            #text-logo{
+                position:absolute;
+                left:-12px;
+                bottom:-10px;
+                width:115px;
+                z-index:-1;
+                @media screen and (min-width)
+            }
+        }
+    }
+}

@@ -1,0 +1,115 @@
+.main-title-container{
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    font-family: "Agbalumo", sans-serif;
+    text-shadow:1px 1px 2px rgb(7, 14, 40);
+    .logo-container{
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        gap:20px;
+        #dark-souls-logo{
+            margin-top:10px;
+            width:180px;
+            @media screen and (min-width: 700px){
+                width:200px;
+            }
+        }
+
+        .divide{
+            color:rgb(218, 152, 30);
+            margin-top:30px;
+            font-family:"Special Elite", serif;
+            font-size:3.5rem;
+            @media screen and (min-width:700px){
+                font-size:4rem;
+            }
+        }
+
+        .tcg-logo-container{
+            position:relative;
+            #fire-logo{
+                cursor:pointer;
+                transition:all .7s ease-in-out;
+                z-index: 1;
+                &:hover{
+                    transform:rotate(360deg);
+                }
+                width:90px;
+                @media screen and (min-width: 700px){
+                    width:95px;
+                }
+            }
+//TODO find new positions
+            #text-logo{
+                position:absolute;
+                left:-12px;
+                bottom:-10px;
+                width:115px;
+                z-index:-1;
+                @media screen and (min-width: 700px){
+                    left:-12px;
+                    bottom:-10px;
+                    width:120px;
+                }
+            }
+        }
+    }
+
+    p{
+        display:flex;
+        text-align:center;
+        color:rgb(255,255,255);
+        background-color: rgba(7,24, 49 , 0.600);
+        padding: 5px 6px;
+        border-radius: 10px;
+        margin:0;
+        margin-top:12px;
+        @media screen and (min-width: 700px){
+            padding:5px 10px;
+        }
+    }
+}
+
+//making the logo bigger for difficulty page 
+.main-difficulty-page-container{
+    .logo-container{
+        margin-top:20px;
+        #dark-souls-logo{
+            @media screen and (min-width:700px){
+                width:250px;
+            }
+        }
+        .divide {
+            @media screen and (min-width:700px){
+                margin-top:40px;
+                font-size:5rem;
+            }
+        }
+        .tcg-logo-container{
+            #fire-logo{
+                @media screen and (min-width: 700px){
+                    width:100px;
+                }
+            }
+            #text-logo{
+                @media screen and (min-width: 700px){
+                    left:-19px;
+                    bottom:-15px;
+                    width:140px;
+                }
+            }
+        }
+
+        @media  screen and (min-width:700) {
+            gap:30px;
+        }
+    }
+
+    p{
+        @media screen and (min-width:700) {
+            padding:5px 15px;
+        }
+    }
+}

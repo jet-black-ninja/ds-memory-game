@@ -1,0 +1,7 @@
+@import "./mixins.scss";
+@import "./Fonts.scss";
+.main-game-container{
+    @include backgroundVideoMobile();
+    color :rgb(255, 255, 255);
+    font-family: "Ag";
+}
