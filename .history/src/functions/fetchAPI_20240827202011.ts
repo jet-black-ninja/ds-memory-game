@@ -1,6 +1,6 @@
-export default async function fetchCharacters() {
+export default async fuction fetchCharacters() {
     try{
-        const response = await fetch("",{
+        const response = await fetch("".{
             mode:"cors",
         });
         const result = await response.json();

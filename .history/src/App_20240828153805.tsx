@@ -1,5 +1,5 @@
 import {useState, useEffect, createContext} from "react";
-import './styles/App.scss'
+import ''
 import fetchCharacters from "./functions/fetchAPI.ts";
 import {filterImage} from "./functions/filterImage.ts";
 import LoadingPage from "./components/pages/LoadingPage.tsx";

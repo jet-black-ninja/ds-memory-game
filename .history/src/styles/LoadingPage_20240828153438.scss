@@ -1,0 +1,13 @@
+@font-face {
+    font-family:'OptimusPrinceps';
+    src:url('../assets/fonts/OptimusPrinceps.ttf') format('truetype');
+}
+.LoadingPage{
+    font-family : ds-font;
+    #loadingVideo{
+        position:fixed;
+        top:50%;
+        left: 50%;
+        
+    }
+}

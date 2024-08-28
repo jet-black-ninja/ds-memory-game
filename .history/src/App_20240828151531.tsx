@@ -1,5 +1,5 @@
 import {useState, useEffect, createContext} from "react";
-import './styles/App.scss'
+import './App.scss'
 import fetchCharacters from "./functions/fetchAPI.ts";
 import {filterImage} from "./functions/filterImage.ts";
 import LoadingPage from "./components/pages/LoadingPage.tsx";
@@ -50,10 +50,7 @@ function App() {
        <pageContext.Provider value={{ charList, setCharList, winActive, loseActive, setDifficultyActive, setWinActive, setLoseActive, currScore, bestScore, setCurrScore, setBestScore, selectedLevel, setSelectedLevel }}>
 				<>
 					{LoadingPageActive ? <LoadingPage setPageActive={setLoadingPageActive} /> 
-          : difficultyActive ? <DifficultyPage /> 
-          : winActive ? <WinPage /> 
-          : loseActive ? <LosePage /> 
-          : <GamePage />}
+          : difficultyActive ? <DifficultyPage /> : winActive ? <WinPage /> : loseActive ? <LosePage /> : <GamePage />}
 					<SoundBtn />
 				</>
 			</pageContext.Provider>
