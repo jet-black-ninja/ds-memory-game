@@ -1,0 +1,4 @@
+interface shufflePrope{
+    charList: string[];
+}
+
