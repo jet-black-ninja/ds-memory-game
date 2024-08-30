@@ -49,14 +49,14 @@ export const SoundProvider = ({children}: SoundProviderProps) =>{
     const flipCard= cardFlip;
 
     const [currSoundActive , setCurrSoundActive] = useState<boolean>(false);
-    const [currentSoundIndex, setCurrSoundIndex] = useState(0);
+    const [currentSoundIndex, setCurrentSoundIndex] = useState(0);
     const [playFlipCard, {stop:stopFlipCard}]=useSound(flipCard, {volume:.20});
     const [playWinTrack,{stop:stopWinTrack}] = useSound(winTrack, {loop:false});
     const [playDefeatTrack, {stop:stopDefeatTrack}] = useSound(defeatTrack, {loop:false});
     const [playMainTrack, {stop:stopMainTrack}] = useSound(soundFiles[currentSoundIndex],{
         onend: () =>{
             const nextIndex = (currentSoundIndex + 1) % soundFiles.length;
-            setCurrSoundIndex(nextIndex);
+            setCurrentSoundIndex(nextIndex);
         },
     });
 
@@ -65,7 +65,7 @@ export const SoundProvider = ({children}: SoundProviderProps) =>{
         soundFiles,
         currentSoundIndex,
         setCurrSoundActive,
-        setCurrSoundIndex,
+        setCurrentSoundIndex,
         playFlipCard,
         playMainTrack,
         playWinTrack,
