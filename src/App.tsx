@@ -1,7 +1,7 @@
 import {useState, useEffect, createContext} from "react";
 import './styles/App.scss'
-import fetchCharacters from "./functions/fetchAPI.ts";
-import {filterImage} from "./functions/filterImage.ts";
+// import fetchCharacters from "./functions/fetchAPI.ts";
+// import {filterImage} from "./functions/filterImage.ts";
 import LoadingPage from "./components/pages/LoadingPage.tsx";
 import GamePage from "./components/pages/GamePage.tsx";
 import DifficultyPage from "./components/pages/DifficultyPage.tsx";
