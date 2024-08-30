@@ -2,7 +2,7 @@ import {useEffect, useContext} from "react";
 import { pageContext } from "../App";
 import VolBtnOn from "../assets/volume_on.svg";
 import VolBtnOff from "../assets/volume_off.svg";
-import "../styles/Sounds.scss";
+import "../styles/Sound.scss";
 import {useSoundContext} from "../contexts/SoundContext.tsx";
 
 // Function to keep track of the main game music & check on active sound button functionality

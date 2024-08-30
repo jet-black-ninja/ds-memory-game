@@ -1,0 +1,43 @@
+$filter-dark-orange: invert(13%) sepia(45%) saturate(552%) hue-rotate(190deg) brightness(96%) contrast(88%);
+.sound-btn-container{
+    position: fixed;
+    left: 15px;
+    bottom: 15px;
+    transform: translateX(-100px);
+    animation: 2s ease-in 1s rollIn forwards;
+    button{
+        background-color: rgb(220, 230 ,245);
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        border: none;
+        height: 40px;
+        width: 40px;
+        img{
+            filter: $filter-dark-orange;
+            width: 100%
+        }
+        @media screen and (min-width: 700px){
+            height: 45px;
+            width: 45px;
+        }
+    }
+
+    @media screen and (min-width:700px){
+        top:auto;
+        right: auto;
+        left: 30px;
+        bottom : 30px;
+    }
+}
+
+@keyframes rollIn {
+    0%{
+        transform : translateX(-100px) rotate(0deg);
+    }
+    100%{
+        transform:  translateX(0) rotate(360deg);
+    }
+}
