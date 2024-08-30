@@ -1,0 +1,41 @@
+@import "./mixins.scss";
+
+.main-win-container {
+   @include endPage();
+   @include  backgroundVideo();
+   h1 {
+      color: rgb(18, 122, 227);
+      text-shadow: 
+      2px 2px 20px rgba(73, 172, 247, 0.163),
+      -2px -2px 20px rgba(73, 172, 247, 0.377),
+      2px -2px 20px rgba(243, 243, 243, 0.16),
+      -2px 2px 20px rgba(215, 226, 234, 0.3);
+      margin-top: 30px;
+      animation: 1s ease-in 0s scaleIn forwards;
+   }
+   p.description {
+      opacity: 0;
+		animation: 1s ease-in 1s revealFast forwards;
+      color: white;
+      text-shadow: 1px 1px 5px rgb(31, 77, 177);
+   }
+   button {
+      background: linear-gradient(90deg, rgb(64, 151, 222) 0%, rgb(38, 132, 219) 60%, rgb(9, 94, 173) 100%);
+      @media screen and (min-width: 700px) {
+         &:last-child {
+            background: linear-gradient(90deg, rgb(9, 94, 173) 0%, rgb(38, 132, 219) 40%, rgb(64, 151, 222) 100%);
+         }
+      }
+   }
+}
+
+@keyframes scaleIn {
+	0% {
+		scale: .5;
+		opacity: 0;
+	}
+	100% {
+		scale: 1;
+		opacity:1;
+	}
+}
