@@ -18,7 +18,7 @@ export default function selectedCardsAmount({charList, selectedLevel}:selectCard
             newCharList = newCharList.slice(0,10);
             displayCards = 5;
             break;
-        case "hard":
+        case "insane":
             newCharList = newCharList.slice();
             displayCards = 6;
             break;

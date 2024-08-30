@@ -1,4 +1,4 @@
-import {savedClicked} from "./checkScoreCondition.tsx";
+import {savedClicked} from "./checkScoreCondition.ts";
 interface checkWinConditionProps{
     cardsLimit: number;
     setCurrScore: React.Dispatch<React.SetStateAction<number>>;

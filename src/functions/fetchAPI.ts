@@ -1,6 +1,6 @@
 export default async function fetchCharacters() {
     try{
-        const response = await fetch("",{
+        const response = await fetch("http://localhost:8080/charList",{
             mode:"cors",
         });
         const result = await response.json();

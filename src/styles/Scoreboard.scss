@@ -8,6 +8,9 @@
     border-radius: 10px;
     width: 70vw;
     padding: 7px;
+    margin-right:0.25em;
+    position:absolute;
+    right:0;
     h2{
         text-shadow: 1px 1px 1px rgb(218, 152, 30);
         text-align: center;
@@ -33,6 +36,9 @@
 
     @media screen and (min-width: 700px){
         width: 300px;
+    }
+    @media screen and (max-width:700px){
+        position:relative;
     }
 
 }

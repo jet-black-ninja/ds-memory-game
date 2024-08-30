@@ -15,7 +15,7 @@ interface CardProps{
 //remove - and capitalize
 function normalizeName(charName :string){
     charName = charName.replace(/-/g," ");
-    let charNameList = charName.split("");
+    let charNameList = charName.split(" ");
     charNameList = charNameList.map((name)=> name.charAt(0).toUpperCase() + name.slice(1));
     charName = charNameList.join(" ");
     return charName;

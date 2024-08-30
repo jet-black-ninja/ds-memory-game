@@ -1,12 +1,12 @@
 @import './Fonts.scss';
 
-.LoadingPage{
-    font-family : "OptimusPrinceps", sans-serif;
+.loading-screen{
+    font-family : "DSFont",monospace, sans-serif;
     #loadingVideo{
         position:fixed;
         top:50%;
         left: 50%;
-        transform:(-50%, -50%);
+        transform:translate(-50%, -50%);
         width:100%;
         height:auto;
         min-width:100%;

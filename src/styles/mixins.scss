@@ -1,12 +1,14 @@
 $filter-blue: invert(55%) sepia(94%) saturate(1004%) hue-rotate(176deg) brightness(91%) contrast(97%);
 $filter-yellow: invert(95%) sepia(95%) saturate(2368%) hue-rotate(328deg) brightness(98%) contrast(92%);
+@import './Fonts.scss';
+
 @mixin endPage() {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     color: white;
-    font-family: 'OptimusPrinceps', monospace, sans-serif;
+    font-family: 'DSFont', monospace, sans-serif;
     h1{
         text-align: center;
         font-size : 2.5rem;
@@ -29,7 +31,7 @@ $filter-yellow: invert(95%) sepia(95%) saturate(2368%) hue-rotate(328deg) bright
         }
     }
     button {
-        font-family: 'OptimusPrinceps', monospace, sans-serif;
+        font-family: 'DSFont', monospace, sans-serif;
         position: relative;
         display: flex;
         justify-content: center;
@@ -82,7 +84,7 @@ $filter-yellow: invert(95%) sepia(95%) saturate(2368%) hue-rotate(328deg) bright
 }
 
 @mixin selectButton() {
-    font-family: 'OptimusPrinceps', monospace, sans-serif;
+    font-family: 'DSFont', monospace, sans-serif;
     color: white;
     cursor: pointer;
     padding: 15px 30px;

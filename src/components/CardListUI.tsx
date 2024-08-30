@@ -46,7 +46,7 @@ function CardListUI ({currCharList, showCardsNumber}: CardListUIProps) {
 		<>
 			{shownCharList.map((char, index) => (
 				<Card key={index} charName={char} />
-			))}7
+			))}
 		</>
 	);
 }

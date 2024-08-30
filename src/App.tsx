@@ -39,9 +39,68 @@ function App() {
 
   useEffect(() => {
     async function fetchData() {
-      const fetchedNameList = await fetchCharacters();
-      const filteredList = filterImage(fetchedNameList);
-      setCharList(filteredList);
+      // const fetchedNameList = await fetchCharacters();
+      // const filteredList = filterImage(fetchedNameList);
+      
+      setCharList([
+        "abyss-walkers",
+        "aldrich-devourer-of-gods",
+        "alvina",
+        "andre-the-blacksmith",
+        "anri-of-astora",
+        "bed-of-chaos",
+        "bell-gargoyle",
+        "big-hat-logan",
+        "champion-gundyr",
+        "chaos-witch-quelaag",
+        "crestfall-warrior",
+        "crossbreed-priscilla",
+        "darkeater-midir",
+        "dragonslayer-armour",
+        "dragonslayer-ornstein",
+        "eygon-of-carim",
+        "fair-lady",
+        "fire-keeper",    "four-kings",
+        "gravelord-nito",
+        "great-grey-wolf-sif",
+        "greirat-of-the-undead-settlement",
+        "gwynevere",
+        "gywn-lord-of-cinder",
+        "hawkeye-gough",
+        "hawkwood-the-deserter",
+        "ingward",
+        "karla",
+        "lady-of-the-darkling",
+        "laurentious-of-the-great-swamp",
+        "lautrec-of-carim",
+        "nameless-king",
+        "oceiros-the-consumed-king",
+        "orbeck-of-vinhiem",
+        "oswald-of-carim",
+        "pontiff-sulyvahn",
+        "quelana-of-izaleth",
+        "seath-the-scaleless",
+        "shiva-of-the-east",
+        "siegmeyer-of-catarina",
+        "sirris-of-the-sunless-realms",
+        "sir-vilhelm",
+        "sister-friede",
+        "slave-knight-gael",
+        "executioner-smough",
+        "solair-of-astora",
+        "soul-of-cinder",
+        "trusty-patches",
+        "twin-princes",
+        "yhorm-the-giant",
+        "yuria-of-londor",
+        "capra-demon",
+        "dancer-of-the-boreal-valley",
+        "dark-son-gwyndolin",
+        "domhnall-of-zina",
+        "dusk-of-oolacile",
+        "filianore",
+        "kingseeker-frampt",
+    ]);
     }
     fetchData();
   },[]);

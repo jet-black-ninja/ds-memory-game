@@ -61,7 +61,7 @@ import framptImage from '../assets/kingseeker-frampt.png';
 const charImageMap: {[key:string ]:string}={
     "abyss-walkers":abyssImage,
     "aldrich-devourer-of-gods":aldrichImage,
-    alvina:alvinaImage,
+    "alvina":alvinaImage,
     "andre-the-blacksmith":andreImage,
     "anri-of-astora":anriImage,
     "bed-of-chaos":bedImage,
