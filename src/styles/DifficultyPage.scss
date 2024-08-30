@@ -1,0 +1,117 @@
+@import './mixins.scss';
+@import './Fonts.scss';
+
+.main-difficulty-page-container{
+    @include backgroundVideo();
+    display: flex; 
+    align-items: center;
+    flex-direction: column;
+    height:100vh;
+    
+    .description-container{
+        @include centerElements();
+        margin-top: 30px;
+        div{
+            font-family: 'OptimusPrinceps', monospace, sans-serif;
+            padding: 10px;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            border: 3px solid rgb(217,221, 246);
+            border-left: none;
+            border-radius: 5px;
+            background: rgb(203,126,9);
+            background: linear-gradient(90deg, rgba(203,126,9,0.9976365546218487) 0%, rgba(219,219,57,1) 100%);//TODO change gradient
+            color: rgb(255, 255, 255);
+            text-shadow: 1px 1px 2px rgb(77, 47, 9);
+            z-index: 0;
+            height: 170px;
+            animation: 1.3s ease-out 0s scrollInFromLeft forwards;
+            p{
+                font-size:0.85rem;
+                opacity: 0;
+                animation: 1s ease-out 1.3s fadeIn forwards;
+            }
+            @media screen and (min-width: 700px) {
+                font-size:0.95rem;
+                margin:30px 0 30px -5px;
+            }
+        }
+        img{
+            height:205.71px;
+            width: 120px;
+            z-index: 1;
+            border-radius:5px;
+            @media screen and (min-width:700px){
+                width: 130px;
+                height: 222.85px;
+            }
+        }
+    }
+    
+    .difficulty-opt-container {
+		display: flex;
+		flex-direction: column;
+		button {
+			opacity: 0; // hide button initially
+			@include selectButton();
+			background: linear-gradient(90deg, rgb(95, 138, 209) 0%, rgb(101, 164, 223) 92%, rgb(69, 166, 235) 100%);
+			transition: all 0.5s ease-in-out;
+			&:first-child {
+				animation: 2s ease-out 1s 1 showOpacity forwards, 2s ease-out 1s 1 slideInFromBottom ;
+			}
+			&:nth-child(2) {
+				animation: 2s ease-out  1.3s 1 showOpacity forwards, 2s ease-out 1.3s 1 slideInFromBottom;
+			}
+			&:last-child {
+				animation: 2s ease-out  1.6s 1 showOpacity forwards, 2s ease-out 1.6s 1 slideInFromBottom ;
+			}
+			&:hover {
+				transform: translateY(-10px);
+			}
+		}
+		@media screen and (min-width: 700px) {
+			margin-top: 15px;
+			flex-direction: row;
+			gap: 30px;
+		}
+	}
+}
+
+@keyframes slideInFromBottom {
+	0% {
+		opacity: 0;
+		transform: translateY(100%); /* Start from below */
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0); /* Move to the original position */
+	}
+}
+@keyframes showOpacity {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes scrollInFromLeft {
+	0% {
+		width: 0;
+	}
+	100% {
+
+		width: 65%;
+	}
+}
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
