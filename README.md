@@ -3,7 +3,7 @@ A fun fan project Inspired by Dark Souls , infused with the challenge of a memor
 
 Link: https://ds-memory-game-47ij.vercel.app/ 🧩
 
-<img width="982" alt="screenshot" src="https://imgur.com/a/LAhTK5j">
+<img width="982" alt="screenshot" src="./public/screenshots/Screenshot 2024-08-31 112733.png">
 
 ## Disclaimers ⚠️
 This is a fan-made project based on the game Dark Souls. This project features materials protected by the Fair Use guidelines of Section 107 of the Copyright Act. All rights reserved to the copyright owners. <br>
