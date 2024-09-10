@@ -1,3 +1,4 @@
+
 interface checkScoreConditionProps{
     targetName: string;
     currScore: number;
@@ -5,6 +6,7 @@ interface checkScoreConditionProps{
     setBestScore: React.Dispatch<React.SetStateAction<number>>;
     setCurrScore: React.Dispatch<React.SetStateAction<number>>;
 }
+
 
 let savedClicked:string[]=[];
 
@@ -15,12 +17,13 @@ function checkScoreCondition({targetName, currScore, bestScore, setBestScore, se
         savedClicked = [];
         return "lose";
     } else {
-        const newScore = currScore++;
+        const newScore = currScore+1;
+        
         const newBestScore = Math.max(bestScore, newScore);
         setCurrScore(newScore);
         setBestScore(newBestScore);
         savedClicked.push(targetName);
-        return "Continue";
+        return "continue";
     }
 }
 

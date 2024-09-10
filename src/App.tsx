@@ -36,7 +36,6 @@ function App() {
   const [selectedLevel, setSelectedLevel]  = useState("");
   const [currScore, setCurrScore] = useState(0);
   const [bestScore, setBestScore] = useState(0);
-
   useEffect(() => {
     async function fetchData() {
       // const fetchedNameList = await fetchCharacters();
